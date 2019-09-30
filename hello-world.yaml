@@ -8,3 +8,18 @@ steps:
   - echo "Hello world."
   spec:
     hello: world
+- name: ls
+  image: alpine:latest
+  command: ls
+  args:
+  - "-la"
+  - "/"
+  dependsOn:
+    - echo
+- name: ps
+  image: alpine:latest
+  command: ps
+  args:
+  - "-a"
+  dependsOn:
+    - echo
