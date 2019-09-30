@@ -3,14 +3,14 @@ description: Workflow to echo a nice hello world message to the logs
 
 parameters:
   message:
-    description: Slack message
-    default: "Hello World! :hooray:"
+    description: Message
+    default: "Hello World!"
 
 steps:
 - name: echo
   image: alpine:latest
   input:
-  - echo $message
+  - echo message
   spec:
     hello: world
 - name: ls
