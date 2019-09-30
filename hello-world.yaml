@@ -1,16 +1,11 @@
 version: v1
 description: Workflow to echo a nice hello world message to the logs
 
-parameters:
-  message:
-    description: Message
-    default: "Hello World!"
-
 steps:
 - name: echo
   image: alpine:latest
   input:
-  - echo message
+  - echo "Hello World"
   spec:
     hello: world
 - name: ls
