@@ -1,11 +1,5 @@
 version: v1
 description: Workflow to echo a nice hello world message to the logs
-
-parameters:
-  message:
-    description: Slack message
-    default: "Hello World! :hooray:"
-
 steps:
 - name: echo
   image: alpine:latest
