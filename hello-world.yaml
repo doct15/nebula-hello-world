@@ -10,7 +10,7 @@ steps:
 - name: echo
   image: alpine:latest
   input:
-  - echo message
+  - echo $message
   spec:
     hello: world
 - name: ls
